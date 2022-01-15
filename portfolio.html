@@ -1,0 +1,625 @@
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="./css/modern-normalize.css" />
+    <link rel="stylesheet" href="./css/main.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container header__container">
+        <nav class="header__navi">
+          <a class="header__logo-first header__logo logo link" lang="en" href="./index.html"
+            >Web<span class="header__logo-second logo">Studio</span></a
+          >
+          <ul class="header__list list">
+            <li class="header__list-item">
+              <a class="header__list-link link" href="./index.html">Студия</a>
+            </li>
+            <li class="header__list-item">
+              <a class="header__list-link current link" href="./portfolio.html">Портфолио</a>
+            </li>
+            <li class="header__list-item">
+              <a class="header__list-link link" href="">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+        <ul class="contact__list list">
+          <li class="contact__list-item">
+            <a
+              href="mailto:info@devstudio.com"
+              class="contact__list-contacts header__envelope link"
+            >
+              <svg class="contact__list-item-icon" width="16" height="16">
+                <use href="./images/icons.svg#icon-envelope"></use>
+              </svg>
+              info@devstudio.com</a
+            >
+          </li>
+          <li class="contact__list-item">
+            <a href="tel:+380961111111" class="contact__list-contacts header__tel link">
+              <svg class="contact__list-item-icon" width="16" height="16">
+                <use href="./images/icons.svg#icon-smartphone"></use>
+              </svg>
+              +38 096 111 11 11</a
+            >
+          </li>
+        </ul>
+        <button
+          type="button"
+          class="phone__menu-open-btn js-open-menu"
+          aria-expanded="false"
+          aria-controls="phone__menu"
+        >
+          <svg class="phone__menu-open-icon" width="24" height="16">
+            <use href="./images/icons.svg#icon-menu_open"></use>
+          </svg>
+        </button>
+      </div>
+      <div class="phone__menu js-menu-container" id="phone__menu">
+        <div class="container">
+          <div class="phone__menu-top">
+            <button
+              type="button"
+              class="phone__menu-close-btn js-close-menu"
+              aria-expanded="false"
+              aria-controls="phone__menu"
+            >
+              <svg class="phone__menu-close-icon" width="18.67" height="18.67">
+                <use href="./images/icons.svg#icon-menu_close"></use>
+              </svg>
+            </button>
+            <ul class="phone__menu-list list">
+              <li class="phone__menu-list-item">
+                <a class="phone__menu-list-link link" href="./index.html">Студия</a>
+              </li>
+              <li class="phone__menu-list-item">
+                <a class="phone__menu-list-link current link" href="./portfolio.html">Портфолио</a>
+              </li>
+              <li class="phone__menu-list-item">
+                <a class="phone__menu-list-link link" href="">Контакты</a>
+              </li>
+            </ul>
+          </div>
+          <div class="phone__menu-buttom">
+            <ul class="phone__contact-list list">
+              <li class="phone__contact-list-item">
+                <a href="tel:+380961111111" class="phone__contact-list-contacts phone__tel link">
+                  +38 096 111 11 11</a
+                >
+              </li>
+              <li class="phone__contact-list-item">
+                <a
+                  href="mailto:info@devstudio.com"
+                  class="phone__contact-list-contacts phone__envelope link"
+                >
+                  info@devstudio.com</a
+                >
+              </li>
+            </ul>
+            <ul class="phone__list-social list">
+              <li class="phone__social-item">
+                <a href="" class="phone__social-link">Instagram</a>
+              </li>
+              <li class="phone__social-item">
+                <a href="" class="phone__social-link">Twitter </a>
+              </li>
+              <li class="phone__social-item">
+                <a href="" class="phone__social-link">Facebook </a>
+              </li>
+              <li class="phone__social-item">
+                <a href="" class="phone__social-link">LinkedIn </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="filter section">
+        <div class="container">
+          <h1 class="filter__title visually-hidden">Projects</h1>
+          <ul class="filter__list list">
+            <li class="filter__list-item">
+              <button class="filter__list-btn current-btn" type="button">Все</button>
+            </li>
+            <li class="filter__list-item">
+              <button class="filter__list-btn" type="button">Веб-сайты</button>
+            </li>
+            <li class="filter__list-item">
+              <button class="filter__list-btn" type="button">Приложения</button>
+            </li>
+            <li class="filter__list-item">
+              <button class="filter__list-btn" type="button">Дизайн</button>
+            </li>
+            <li class="filter__list-item">
+              <button class="filter__list-btn" type="button">Маркетинг</button>
+            </li>
+          </ul>
+          <ul class="work__list list">
+            <li class="work__list-item">
+              <div class="work__list-item-focus">
+                <a href="" class="work__list-focus-link link">
+                  <div class="work__list-item-wrap">
+                    <picture class="work_list_img">
+                      <source
+                        srcset="
+                          ./images/portfolio/desktop/techno_desktop.jpg    1x,
+                          ./images/portfolio/desktop/techno_desktop_2x.jpg 2x
+                        "
+                        media="(min-width: 1200px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/portfolio/tablet/techno_tablet.jpg    1x,
+                          ./images/portfolio/tablet/techno_tablet_2x.jpg 2x
+                        "
+                        media="(min-width: 768px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/portfolio/phone/techno_phone.jpg    1x,
+                          ./images/portfolio/phone/techno_phone_2x.jpg 2x
+                        "
+                        media="(min-width: 320px)"
+                      />
+                      <img src="./images/portfolio/desktop/techno_desktop.jpg" alt="Технокряк" />
+                    </picture>
+                    <p class="work__list-top-text">
+                      Технокряк это современная площадка распространения коронавируса. Компании
+                      используют эту платформу для цифрового шпионажа и атак на защищённые сервера
+                      конкурентов.
+                    </p>
+                  </div>
+                  <div class="work__list-about">
+                    <h2 class="work__list-title">Технокряк</h2>
+                    <p class="work__list-text">Веб-сайт</p>
+                  </div>
+                </a>
+              </div>
+            </li>
+            <li class="work__list-item">
+              <div class="work__list-item-focus">
+                <a href="" class="work__list-focus-link link">
+                  <div class="work__list-item-wrap">
+                    <picture>
+                      <source
+                        srcset="
+                          ./images/portfolio/desktop/poster_desktop.jpg    1x,
+                          ./images/portfolio/desktop/poster_desktop_2x.jpg 2x
+                        "
+                        media="(min-width: 1200px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/portfolio/tablet/poster_tablet.jpg    1x,
+                          ./images/portfolio/tablet/poster_tablet_2x.jpg 2x
+                        "
+                        media="(min-width: 768px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/portfolio/phone/poster_phone.jpg    1x,
+                          ./images/portfolio/phone/poster_phone_2x.jpg 2x
+                        "
+                        media="(min-width: 320px)"
+                      />
+
+                      <img
+                        src="./images/portfolio/desktop/poster_desktop.jpg"
+                        alt="Постер New Orlean vs Golden Star"
+                      />
+                    </picture>
+                    <p class="work__list-top-text">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, placeat
+                      molestiae accusantium facere illum sapiente. Accusantium, sit quod maiores
+                      nulla, tempore ratione laudantium a maxime atque odit ipsam reprehenderit
+                      impedit!
+                    </p>
+                  </div>
+                  <div class="work__list-about">
+                    <h2 class="work__list-title">
+                      Постер <span lang="en">New Orlean vs Golden Star</span>
+                    </h2>
+                    <p class="work__list-text">Дизайн</p>
+                  </div>
+                </a>
+              </div>
+            </li>
+            <li class="work__list-item">
+              <div class="work__list-item-focus">
+                <a href="" class="work__list-focus-link link">
+                  <div class="work__list-item-wrap">
+                    <picture>
+                      <source
+                        srcset="
+                          ./images/portfolio/desktop/seafood_desktop.jpg    1x,
+                          ./images/portfolio/desktop/seafood_desktop_2x.jpg 2x
+                        "
+                        media="(min-width: 1200px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/portfolio/tablet/seafood_tablet.jpg    1x,
+                          ./images/portfolio/tablet/seafood_tablet_2x.jpg 2x
+                        "
+                        media="(min-width: 768px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/portfolio/phone/seafood_phone.jpg    1x,
+                          ./images/portfolio/phone/seafood_phone_2x.jpg 2x
+                        "
+                        media="(min-width: 320px)"
+                      />
+                      <img
+                        src="./images/portfolio/desktop/seafood_desktop.jpg"
+                        alt="Ресторан Seafood"
+                      />
+                    </picture>
+                    <p class="work__list-top-text">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, placeat
+                      molestiae accusantium facere illum sapiente. Accusantium, sit quod maiores
+                      nulla, tempore ratione laudantium a maxime atque odit ipsam reprehenderit
+                      impedit!
+                    </p>
+                  </div>
+                  <div class="work__list-about">
+                    <h2 class="work__list-title">Ресторан <span lang="en">Seafood</span></h2>
+                    <p class="work__list-text">Приложение</p>
+                  </div>
+                </a>
+              </div>
+            </li>
+            <li class="work__list-item">
+              <div class="work__list-item-focus">
+                <a href="" class="work__list-focus-link link">
+                  <div class="work__list-item-wrap">
+                    <picture>
+                      <source
+                        srcset="
+                          ./images/portfolio/desktop/prime_desktop.jpg    1x,
+                          ./images/portfolio/desktop/prime_desktop_2x.jpg 2x
+                        "
+                        media="(min-width: 1200px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/portfolio/tablet/prime_tablet.jpg    1x,
+                          ./images/portfolio/tablet/prime_tablet_2x.jpg 2x
+                        "
+                        media="(min-width: 768px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/portfolio/phone/prime_phone.jpg    1x,
+                          ./images/portfolio/phone/prime_phone_2x.jpg 2x
+                        "
+                        media="(min-width: 320px)"
+                      />
+                      <img src="./images/portfolio/desktop/prime_desktop.jpg" alt="Проект Prime" />
+                    </picture>
+                    <p class="work__list-top-text">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, placeat
+                      molestiae accusantium facere illum sapiente. Accusantium, sit quod maiores
+                      nulla, tempore ratione laudantium a maxime atque odit ipsam reprehenderit
+                      impedit!
+                    </p>
+                  </div>
+                  <div class="work__list-about">
+                    <h2 class="work__list-title">Проект <span lang="en">Prime</span></h2>
+                    <p class="work__list-text">Маркетинг</p>
+                  </div>
+                </a>
+              </div>
+            </li>
+            <li class="work__list-item">
+              <div class="work__list-item-focus">
+                <a href="" class="work__list-focus-link link">
+                  <div class="work__list-item-wrap">
+                    <picture>
+                      <source
+                        srcset="
+                          ./images/portfolio/desktop/boxes_desktop.jpg    1x,
+                          ./images/portfolio/desktop/boxes_desktop_2x.jpg 2x
+                        "
+                        media="(min-width: 1200px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/portfolio/tablet/boxes_tablet.jpg    1x,
+                          ./images/portfolio/tablet/boxes_tablet_2x.jpg 2x
+                        "
+                        media="(min-width: 768px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/portfolio/phone/boxes_phone.jpg    1x,
+                          ./images/portfolio/phone/boxes_phone_2x.jpg 2x
+                        "
+                        media="(min-width: 320px)"
+                      />
+                      <img src="./images/portfolio/desktop/boxes_desktop.jpg" alt="Проект Boxes" />
+                    </picture>
+                    <p class="work__list-top-text">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, soluta deserunt
+                      praesentium ea harum ipsum quis dolores, aut iusto ducimus doloremque atque
+                      consequatur sapiente vero? In error atque eius unde.
+                    </p>
+                  </div>
+                  <div class="work__list-about">
+                    <h2 class="work__list-title">Проект <span lang="en">Boxes</span></h2>
+                    <p class="work__list-text">Приложение</p>
+                  </div>
+                </a>
+              </div>
+            </li>
+            <li class="work__list-item">
+              <div class="work__list-item-focus">
+                <a href="" class="work__list-focus-link link">
+                  <div class="work__list-item-wrap">
+                    <picture>
+                      <source
+                        srcset="
+                          ./images/portfolio/desktop/borders_desktop.jpg    1x,
+                          ./images/portfolio/desktop/borders_desktop_2x.jpg 2x
+                        "
+                        media="(min-width: 1200px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/portfolio/tablet/borders_tablet.jpg    1x,
+                          ./images/portfolio/tablet/borders_tablet_2x.jpg 2x
+                        "
+                        media="(min-width: 768px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/portfolio/phone/borders_phone.jpg    1x,
+                          ./images/portfolio/phone/borders_phone_2x.jpg 2x
+                        "
+                        media="(min-width: 320px)"
+                      />
+                      <img
+                        lang="en"
+                        src="./images/portfolio/desktop/borders_desktop.jpg"
+                        alt="Inspiration has no Borders"
+                      />
+                    </picture>
+                    <p class="work__list-top-text">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, placeat
+                      molestiae accusantium facere illum sapiente. Accusantium, sit quod maiores
+                      nulla, tempore ratione laudantium a maxime atque odit ipsam reprehenderit
+                      impedit!
+                    </p>
+                  </div>
+                  <div class="work__list-about">
+                    <h2 lang="en" class="work__list-title">Inspiration has no Borders</h2>
+                    <p class="work__list-text">Веб-сайт</p>
+                  </div>
+                </a>
+              </div>
+            </li>
+            <li class="work__list-item">
+              <div class="work__list-item-focus">
+                <a href="" class="work__list-focus-link link">
+                  <div class="work__list-item-wrap">
+                    <picture>
+                      <source
+                        srcset="
+                          ./images/portfolio/desktop/limited_desktop.jpg    1x,
+                          ./images/portfolio/desktop/limited_desktop_2x.jpg 2x
+                        "
+                        media="(min-width: 1200px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/portfolio/tablet/limited_tablet.jpg    1x,
+                          ./images/portfolio/tablet/limited_tablet_2x.jpg 2x
+                        "
+                        media="(min-width: 768px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/portfolio/phone/limited_phone.jpg    1x,
+                          ./images/portfolio/phone/limited_phone_2x.jpg 2x
+                        "
+                        media="(min-width: 320px)"
+                      />
+                      <img
+                        src="./images/portfolio/desktop/limited_desktop.jpg"
+                        alt="Издание Limited Edition"
+                      />
+                    </picture>
+                    <p class="work__list-top-text">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, placeat
+                      molestiae accusantium facere illum sapiente. Accusantium, sit quod maiores
+                      nulla, tempore ratione laudantium a maxime atque odit ipsam reprehenderit
+                      impedit!
+                    </p>
+                  </div>
+                  <div class="work__list-about">
+                    <h2 class="work__list-title">Издание <span lang="en">Limited Edition</span></h2>
+                    <p class="work__list-text">Издание <span lang="en">Limited Edition</span></p>
+                  </div>
+                </a>
+              </div>
+            </li>
+            <li class="work__list-item">
+              <div class="work__list-item-focus">
+                <a href="" class="work__list-focus-link link">
+                  <div class="work__list-item-wrap">
+                    <picture>
+                      <source
+                        srcset="
+                          ./images/portfolio/desktop/lab_desktop.jpg    1x,
+                          ./images/portfolio/desktop/lab_desktop_2x.jpg 2x
+                        "
+                        media="(min-width: 1200px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/portfolio/tablet/lab_tablet.jpg    1x,
+                          ./images/portfolio/tablet/lab_tablet_2x.jpg 2x
+                        "
+                        media="(min-width: 768px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/portfolio/phone/lab_phone.jpg    1x,
+                          ./images/portfolio/phone/lab_phone_2x.jpg 2x
+                        "
+                        media="(min-width: 320px)"
+                      />
+                      <img src="./images/portfolio/desktop/lab_desktop.jpg" alt="Проект LAB" />
+                    </picture>
+                    <p class="work__list-top-text">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, placeat
+                      molestiae accusantium facere illum sapiente. Accusantium, sit quod maiores
+                      nulla, tempore ratione laudantium a maxime atque odit ipsam reprehenderit
+                      impedit!
+                    </p>
+                  </div>
+                  <div class="work__list-about">
+                    <h2 class="work__list-title">Проект <span lang="en">LAB</span></h2>
+                    <p class="work__list-text">Маркетинг</p>
+                  </div>
+                </a>
+              </div>
+            </li>
+            <li class="work__list-item">
+              <div class="work__list-item-focus">
+                <a href="" class="work__list-focus-link link">
+                  <div class="work__list-item-wrap">
+                    <picture>
+                      <source
+                        srcset="
+                          ./images/portfolio/desktop/business_desktop.jpg    1x,
+                          ./images/portfolio/desktop/business_desktop_2x.jpg 2x
+                        "
+                        media="(min-width: 1200px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/portfolio/tablet/business_tablet.jpg    1x,
+                          ./images/portfolio/tablet/business_tablet_2x.jpg 2x
+                        "
+                        media="(min-width: 768px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/portfolio/phone/business_phone.jpg    1x,
+                          ./images/portfolio/phone/business_phone_2x.jpg 2x
+                        "
+                        media="(min-width: 320px)"
+                      />
+                      <img
+                        lang="en"
+                        src="./images/portfolio/desktop/business_desktop.jpg"
+                        alt="Growing Business"
+                      />
+                    </picture>
+                    <p class="work__list-top-text">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, placeat
+                      molestiae accusantium facere illum sapiente. Accusantium, sit quod maiores
+                      nulla, tempore ratione laudantium a maxime atque odit ipsam reprehenderit
+                      impedit!
+                    </p>
+                  </div>
+                  <div class="work__list-about">
+                    <h2 lang="en" class="work__list-title">Growing Business</h2>
+                    <p class="work__list-text">Приложение</p>
+                  </div>
+                </a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+    <footer class="footer__main">
+      <div class="container footer">
+        <div class="footer__wrap">
+          <div class="footer__first">
+            <a lang="en" href="./index.html" class="footer__logo-first logo footer__logo link"
+              >Web<span class="footer__logo-second logo">Studio</span></a
+            >
+            <address class="footer__addr">
+              <ul class="footer__list list">
+                <li class="footer__list-item">
+                  <a href="https://goo.gl/maps/25rhQZWRj38k3xnr6" class="footer__list-address link"
+                    >г. Киев, пр-т Леси Украинки, 26</a
+                  >
+                </li>
+                <li class="footer__list-item">
+                  <a href="mailto:info@example.com" class="footer__list-contacts link"
+                    >info@example.com</a
+                  >
+                </li>
+                <li class="footer__list-item">
+                  <a href="tel:+380991111111" class="footer__list-contacts link"
+                    >+38 099 111 11 11</a
+                  >
+                </li>
+              </ul>
+            </address>
+          </div>
+          <div class="footer__list-join join">
+            <p class="join__title">присоединяйтесь</p>
+            <ul class="join__social social list">
+              <li class="join__social-item">
+                <a href="" class="join__social-link">
+                  <svg class="join__social-icon" width="20" height="20">
+                    <use href="./images/icons.svg#icon-instagram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="join__social-item">
+                <a href="" class="join__social-link">
+                  <svg class="join__social-icon" width="20" height="20">
+                    <use href="./images/icons.svg#icon-twitter"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="join__social-item">
+                <a href="" class="join__social-link">
+                  <svg class="join__social-icon" width="20" height="20">
+                    <use href="./images/icons.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="join__social-item">
+                <a href="" class="join__social-link">
+                  <svg class="join__social-icon" width="20" height="20">
+                    <use href="./images/icons.svg#icon-linkedin"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="mailing">
+          <p class="mailing__title">Подпишитесь на рассылку</p>
+          <form action="#" class="mailing__forms">
+            <input type="email" class="mailing__text" placeholder="E-mail" />
+            <button type="submit" class="mailing__btn">
+              Подписаться
+              <svg class="mailing__send" width="24" height="24">
+                <use href="images/icons.svg#icon-send"></use>
+              </svg>
+            </button>
+          </form>
+        </div>
+      </div>
+    </footer>
+    <script src="./js/phone__menu.js"></script>
+  </body>
+</html>

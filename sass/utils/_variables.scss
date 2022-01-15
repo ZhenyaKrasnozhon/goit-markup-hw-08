@@ -1,0 +1,20 @@
+:root {
+  --first-color: #ffffff;
+  --second-color: #212121;
+  --third-color: #757575;
+  --accent-color: #2196f3;
+  --background-button: #f5f4fa;
+  --contacts-color: rgba(255, 255, 255, 0.6);
+  --background-first: #2f303a;
+  --background-second: #e5e5e5;
+  --logo-color: #000000;
+  --hover-color: #188ce8;
+  --icon-color: #afb1b8;
+}
+
+.section {
+  padding: 60px 0;
+  @media screen and (min-width: 1200px) {
+    padding: 94px 0;
+  }
+}
